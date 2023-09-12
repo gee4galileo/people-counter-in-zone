@@ -1,0 +1,6 @@
+train: ../peoplecount/data/train/images
+val: ../peoplecount/data/valid/images
+test: ../peoplecount/data/test/images
+
+nc: 1
+names: ['person']
