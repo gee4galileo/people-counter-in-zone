@@ -38,18 +38,81 @@ The YOLOv5 object detection model is re-trained on the preprocessed and augmente
 
 1. Validation: The newly trained model is validated using a validation dataset to assess its accuracy and performance.
 
-
-Returned the following Validation results:
-   
-|   P   |    R    |  mAP  |
-|:-----:|:-------:|:-----:|
-| 0.962 |  0.945  | 0.967 |
-
 2. Inference: The model is tested by running inference on new images or video footage to further evaluate its effectiveness in detecting and counting people in the specified zone.
 
 ### Step 6: Finalizing and Archiving
 
 After successful training and testing, the project is finalized by archiving the results, including the trained model weights, validation results, and any relevant documentation. This ensures that the project outcomes are organized and accessible for future reference and deployment.
+
+## Setting Up the Environment
+
+Follow these steps to set up the Python environment for the People Counter in Specific Zone project:
+
+1. Create a virtual environment named "pc" or "peoplecounter" using the following command:
+
+   ```bash
+   python -m venv pc
+    ```
+2. Activate the virtual environment:
+    - On Windows:
+        ```bash
+        pc\Scripts\activate
+        ```
+    - On macOS and Linux:
+        ```bash
+        source pc/bin/activate
+        ```
+
+3. Install necessary libraries:
+    ```bash
+    pip install ipykernel opencv-python numpy
+    ```
+
+4. Integrate the environment into the IPython kernel (Jupyter Notebook):
+    ```bash
+    python -m ipykernel install --user --name=pc
+    ```
+
+### Data Preparation
+
+Make sure to include the video inside the directory `data/videos/`.
+
+### Follow Our Guide Walk-Through Notebook
+
+Follow the steps outlined in our guide walk-through notebook to collect, label, preprocess, train, validate, and test your People Counter in Specific Zone project.
+
+## Viewing the Results
+
+The fine-tuned model returned the the following Validation results:
+   
+|   P   |    R    |  mAP  |
+|:-----:|:-------:|:-----:|
+| 0.962 |  0.945  | 0.967 |
+
+### Results Graph
+
+![Results Graph](models/yolov5s_smpl/results.png)
+
+### Confusion Matrix
+
+<img src="models/yolov5s_smpl/confusion_matrix.png" width="600" alt="Confusion Matrix">
+
+### F1 Curve
+
+<img src="models/yolov5s_smpl/F1_curve.png" width="600" alt="F1 Curve">
+
+### Precision Curve
+
+<img src="models/yolov5s_smpl/P_curve.png" width="600" alt="Precision Curve">
+
+### Precision-Recall Curve
+
+<img src="models/yolov5s_smpl/PR_curve.png" width="600" alt="Precision-Recall Curve">
+
+### Recall-Confidence Curve
+
+<img src="models/yolov5s_smpl/R_curve.png" width="600" alt="Recall-Confidence Curve">
+
 
 ## Conclusion
 
